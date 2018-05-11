@@ -7,9 +7,19 @@ const hostname = 'https://exampleapirest.herokuapp.com';
 const PORT = process.env.PORT || 5000
 
 let users = ['oscar', 'juan', 'marcos', 'julieta'];
-let books = [
-    {titulo: 'El señor de los anillos', autor: 'J.R.R. Tolkien'},
-    {titulo: "Cancion de hielo y fuego", autor: 'George RR Martin'}
+let products = [
+    {title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: '',idCompany: 1, ofert: 1},
+    {title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: '',idCompany: 1, ofert: 0},
+    {title: 'Aceite Premier 1000 ml', precio: 9960, marca: 'Premier' ,logo: '',idCompany: 1, ofert: 0},
+    {title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7368, marca: 'RANCHERA' ,logo: '',idCompany: 1, ofert: 0},
+    {title: 'Pan Super Hamburguesa X 4', precio: 3016, marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
+    {title: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
+    {title: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,logo: '',idCompany: 1, ofert: 0},
+    {title: 'Aceite Premier 1000 ml', precio: 9960, marca: 'Premier' ,logo: '',idCompany: 1, ofert: 0},
+
+];
+let company=[{id: 1,name: 'Exito',logo: '',direccion:''},];
+
 ];
 
 app.use(bodyParser.json());
