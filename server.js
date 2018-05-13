@@ -25,7 +25,7 @@ let products = [
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',direccion:'Carrera 22B No. 2 - 56'},
 {id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
-{id: 3,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
+{id: 3,name: 'Maximo',logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56',direccion:'Cra. 22 #628'},
 ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -81,7 +81,7 @@ app.get('/products', (req, res) => {
 app.post('/products', (req, res) => {
     let data = req.query;
     users.push(data.user_name)
-    res.send("New user add")
+    res.send("New products add")
 })
 
 // URL para actualizar un usuario
@@ -90,7 +90,7 @@ app.patch('/products/:id',(req, res) => {
     let params = req.params;
     let data = req.query;
     users[params.id] = data.user_name
-    res.send("User update")
+    res.send("products update")
 })
 
 // URL para eliminar un usuario
