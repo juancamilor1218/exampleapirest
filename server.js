@@ -15,13 +15,18 @@ let products = [
     {title: 'Pan Super Hamburguesa X 4', precio: 3016, marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
     {title: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
     {title: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,logo: '',idCompany: 1, ofert: 0},
-    {title: 'Aceite Premier 1000 ml', precio: 9960, marca: 'Premier' ,logo: '',idCompany: 1, ofert: 0},
-
+    {title: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,logo: '',idCompany: 1, ofert: 0},
+   	{title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 1, ofert: 0},
+   	{title: 'Crema Dental Total 12 Clean Mint X 75 ml', precio: 7819, marca: 'Colgate' ,logo: '',idCompany: 1, ofert: 0},
+   	{title: 'Leche Entera En Bolsa X 1 Litro', precio: 1320, marca: 'Colanta', logo: '',idCompany: 2, ofert: 1},
+   	{title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7300, marca: 'Colanta', logo: '',idCompany: 2, ofert: 0},
+   	{title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 8050, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 2, ofert: 0}
 ];
-let company=[{id: 1,name: 'Exito',logo: '',direccion:''},];
-
+let company=[
+{id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',direccion:'Carrera 22B No. 2 - 56'},
+{id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
+{id: 3,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
 ];
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -64,7 +69,35 @@ app.delete('/users/:id',(req, res) => {
     users.splice(params.id, 1);
     res.send('User delete')
 })
+//********************************************************************
+//********************************************************************
 
+app.get('/products', (req, res) => {
+    res.send(products)
+})
+
+// URL para eliminar un usuario
+// http://127.0.0.1:5000/users
+app.post('/products', (req, res) => {
+    let data = req.query;
+    users.push(data.user_name)
+    res.send("New user add")
+})
+
+// URL para actualizar un usuario
+// http://127.0.0.1:5000/users/1
+app.patch('/products/:id',(req, res) => {
+    let params = req.params;
+    let data = req.query;
+    users[params.id] = data.user_name
+    res.send("User update")
+})
+
+// URL para eliminar un usuario
+// http://127.0.0.1:5000/users/1
+app.delete('/products/:id',(req, res) => {
+    let params = req.params;
+    users.splice(params.id, 1);
 // ********************************************************************
 // ********************************************************************
 
