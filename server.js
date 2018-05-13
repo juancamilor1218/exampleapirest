@@ -25,8 +25,9 @@ let products = [
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',direccion:'Carrera 22B No. 2 - 56'},
 {id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
-{id: 3,name: 'Maximo',logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56',direccion:'Cra. 22 #628'},
+{id: 3,name: 'Maximo',logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56',direccion:'Cra. 22 #628'}
 ];
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
