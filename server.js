@@ -77,16 +77,12 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
-// URL para eliminar un usuario
-// http://127.0.0.1:5000/users
 app.post('/products', (req, res) => {
     let data = req.query;
     users.push(data.user_name)
     res.send("New products add")
 })
 
-// URL para actualizar un usuario
-// http://127.0.0.1:5000/users/1
 app.patch('/products/:id',(req, res) => {
     let params = req.params;
     let data = req.query;
@@ -94,8 +90,6 @@ app.patch('/products/:id',(req, res) => {
     res.send("products update")
 })
 
-// URL para eliminar un usuario
-// http://127.0.0.1:5000/users/1
 app.delete('/products/:id',(req, res) => {
     let params = req.params;
     users.splice(params.id, 1);
