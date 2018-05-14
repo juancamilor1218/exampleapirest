@@ -93,6 +93,7 @@ app.patch('/products/:id',(req, res) => {
 app.delete('/products/:id',(req, res) => {
     let params = req.params;
     users.splice(params.id, 1);
+})
 // ********************************************************************
 // ********************************************************************
 
