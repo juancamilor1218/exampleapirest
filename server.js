@@ -20,12 +20,29 @@ let products = [
    	{id: 10, title: 'Crema Dental Total 12 Clean Mint X 75 ml', precio: 7819, marca: 'Colgate' ,logo: '',idCompany: 1, ofert: 0},
    	{id: 11, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1320, marca: 'Colanta', logo: '',idCompany: 2, ofert: 1},
    	{id: 12, title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7300, marca: 'Colanta', logo: '',idCompany: 2, ofert: 0},
-   	{id: 13, title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 8050, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 2, ofert: 0}
+   	{id: 13, title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 8050, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 2, ofert: 0},
+   	{id: 14, title: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 15, title: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 16, title: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,logo: '',idCompany: 4, ofert: 0},
+   	{id: 17, title: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 18, title: 'Salsa de Tomate San jorge x1000gr', precio: 5550, marca: 'San Jorge' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 19, title: 'Arroz FlorHuila x5000gr', precio: 12990, marca: 'FlorHuila' ,logo: '',idCompany: 4, ofert: 0},
+   	{id: 20, title: 'SixPack de Cerveza Poker', precio: 9990, marca: 'Poker' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 21, title: 'SixPack de Cerveza Poker', precio: 9760, marca: 'Poker' ,logo: '',idCompany: 1, ofert: 0},
+   	{id: 22, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 7990, marca: 'Gillette' ,logo: '',idCompany: 4, ofert: 1},
+   	{id: 23, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 9863, marca: 'Gillette' ,logo: '',idCompany: 1, ofert: 0}
+
+
+
+
+
 ];
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',direccion:'Carrera 22B No. 2 - 56'},
-{id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Cra. 22 #628'},
-{id: 3,name: 'Maximo',logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56',direccion:'Cra. 22 #628'}
+{id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',direccion:'Carrera. 22 #628'},
+{id: 3,name: 'Maximo',logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56',direccion:'Carera. 22 #628'},
+{id: 4,name: 'Metro',logo: 'http://teconec.com/img/cliente03.png',direccion:'Calle 11 No. 34 - 78 '},
+
 ];
 
 app.use(bodyParser.json());
@@ -78,11 +95,7 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
-app.post('/products', (req, res) => {
-    let data = req.query;
-    products.push(data.user_name)
-    res.send("New user add")
-})
+
 // ********************************************************************
 // ********************************************************************
 
