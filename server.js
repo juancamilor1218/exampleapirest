@@ -95,6 +95,19 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
+app.patch('/products/:id',(req, res) => {
+    let params = req.params;
+    let data = req.query;
+    products[params.id] = data.user_name
+    res.send("User update")
+})
+
+
+app.delete('/users/:id',(req, res) => {
+    let params = req.params;
+    products.splice(params.id, 1);
+    res.send('User delete')
+})
 
 // ********************************************************************
 // ********************************************************************
