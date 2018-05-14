@@ -8,19 +8,19 @@ const PORT = process.env.PORT || 5000
 
 let users = ['oscar', 'juan', 'marcos', 'julieta'];
 let products = [
-    {title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: '',idCompany: 1, ofert: 1},
-    {title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: '',idCompany: 1, ofert: 0},
-    {title: 'Aceite Premier 1000 ml', precio: 9960, marca: 'Premier' ,logo: '',idCompany: 1, ofert: 0},
-    {title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7368, marca: 'RANCHERA' ,logo: '',idCompany: 1, ofert: 0},
-    {title: 'Pan Super Hamburguesa X 4', precio: 3016, marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
-    {title: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
-    {title: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,logo: '',idCompany: 1, ofert: 0},
-    {title: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,logo: '',idCompany: 1, ofert: 0},
-   	{title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 1, ofert: 0},
-   	{title: 'Crema Dental Total 12 Clean Mint X 75 ml', precio: 7819, marca: 'Colgate' ,logo: '',idCompany: 1, ofert: 0},
-   	{title: 'Leche Entera En Bolsa X 1 Litro', precio: 1320, marca: 'Colanta', logo: '',idCompany: 2, ofert: 1},
-   	{title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7300, marca: 'Colanta', logo: '',idCompany: 2, ofert: 0},
-   	{title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 8050, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 2, ofert: 0}
+    {id: 1, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: '',idCompany: 1, ofert: 1},
+    {id: 2, title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: '',idCompany: 1, ofert: 0},
+    {id: 3, title: 'Aceite Premier 1000 ml', precio: 9960, marca: 'Premier' ,logo: '',idCompany: 1, ofert: 0},
+    {id: 4, title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7368, marca: 'RANCHERA' ,logo: '',idCompany: 1, ofert: 0},
+    {id: 5, title: 'Pan Super Hamburguesa X 4', precio: 3016, marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
+    {id: 6, title: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,logo: '',idCompany: 1, ofert: 1},
+    {id: 7, title: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,logo: '',idCompany: 1, ofert: 0},
+    {id: 8, title: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,logo: '',idCompany: 1, ofert: 0},
+   	{id: 9, title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 1, ofert: 0},
+   	{id: 10, title: 'Crema Dental Total 12 Clean Mint X 75 ml', precio: 7819, marca: 'Colgate' ,logo: '',idCompany: 1, ofert: 0},
+   	{id: 11, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1320, marca: 'Colanta', logo: '',idCompany: 2, ofert: 1},
+   	{id: 12, title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7300, marca: 'Colanta', logo: '',idCompany: 2, ofert: 0},
+   	{id: 13, title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 8050, marca: 'EXITO MARCA PROPIA' ,logo: '',idCompany: 2, ofert: 0}
 ];
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',direccion:'Carrera 22B No. 2 - 56'},
@@ -78,7 +78,11 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
-
+app.post('/products', (req, res) => {
+    let data = req.query;
+    products.push(data.user_name)
+    res.send("New user add")
+})
 // ********************************************************************
 // ********************************************************************
 
