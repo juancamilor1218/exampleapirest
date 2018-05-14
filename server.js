@@ -103,7 +103,7 @@ app.patch('/products/:id',(req, res) => {
 })
 
 
-app.delete('/users/:id',(req, res) => {
+app.delete('/products/:id',(req, res) => {
     let params = req.params;
     products.splice(params.id, 1);
     res.send('User delete')
