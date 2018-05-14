@@ -73,27 +73,6 @@ app.delete('/users/:id',(req, res) => {
 //********************************************************************
 //********************************************************************
 
-app.get('/products', (req, res) => {
-    res.send(products)
-})
-
-app.post('/products', (req, res) => {
-    let data = req.query;
-    users.push(data.user_name)
-    res.send("New products add")
-})
-
-app.patch('/products/:id',(req, res) => {
-    let params = req.params;
-    let data = req.query;
-    users[params.id] = data.user_name
-    res.send("products update")
-})
-
-app.delete('/products/:id',(req, res) => {
-    let params = req.params;
-    users.splice(params.id, 1);
-})
 // ********************************************************************
 // ********************************************************************
 
