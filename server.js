@@ -112,20 +112,20 @@ app.delete('/productos/:id',(req, res) => {
 // ********************************************************************
 // ********************************************************************
 app.get('/company', (req, res) => {
-    res.send(products)
+    res.send(company)
 })
 
 app.patch('/company/:id',(req, res) => {
     let params = req.params;
     let data = req.query;
-    products[params.id] = data.user_name
+    company[params.id] = data.user_name
     res.send("company update")
 })
 
 
 app.delete('/company/:id',(req, res) => {
     let params = req.params;
-    products.splice(params.id, 1);
+    company.splice(params.id, 1);
     res.send('company delete')
 })
 // Crear y lanzar el servidor
