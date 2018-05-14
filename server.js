@@ -99,19 +99,35 @@ app.patch('/products/:id',(req, res) => {
     let params = req.params;
     let data = req.query;
     products[params.id] = data.user_name
-    res.send("User update")
+    res.send("products update")
 })
 
 
-app.delete('/products/:id',(req, res) => {
+app.delete('/productos/:id',(req, res) => {
     let params = req.params;
     products.splice(params.id, 1);
-    res.send('User delete')
+    res.send('products delete')
 })
 
 // ********************************************************************
 // ********************************************************************
+app.get('/company', (req, res) => {
+    res.send(products)
+})
 
+app.patch('/company/:id',(req, res) => {
+    let params = req.params;
+    let data = req.query;
+    products[params.id] = data.user_name
+    res.send("company update")
+})
+
+
+app.delete('/company/:id',(req, res) => {
+    let params = req.params;
+    products.splice(params.id, 1);
+    res.send('company delete')
+})
 // Crear y lanzar el servidor
 http.createServer(app).listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
