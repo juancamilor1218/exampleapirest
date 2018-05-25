@@ -174,6 +174,12 @@ app.delete('/company/:id',(req, res) => {
     company.splice(params.id, 1);
     res.send('company delete')
 })
+//*****************************************************
+//*************************************************************
+app.get('/warehouse', (req, res) => {
+    res.send(products)
+})
+
 // Crear y lanzar el servidor
 http.createServer(app).listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
