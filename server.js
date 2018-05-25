@@ -42,7 +42,7 @@ let warehouse[
 
 {
 id_company:1,
-nombre:'Exito'},
+nombre:'Exito',
 logo:'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',
 direccion:'Carrera 22B No. 2 - 56',
 	products: [
@@ -76,12 +76,6 @@ direccion:'Carrera. 22 #628',
 	]
 
 }
-
-
-
-
-
-
 ];
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',adrress:'Carrera 22B No. 2 - 56'},
@@ -177,7 +171,7 @@ app.delete('/company/:id',(req, res) => {
 //*****************************************************
 //*************************************************************
 app.get('/warehouse', (req, res) => {
-    res.send(products)
+    res.send(warehouse)
 })
 
 // Crear y lanzar el servidor
