@@ -55,7 +55,7 @@ direccion:'Carrera 22B No. 2 - 56',
    				{id: 9, title: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,logo: 'http://patojolandia.com/colombia01/tenderos/1376/cafe-aguila-roja-x-500-grs.jpg',ofert: 0}
 	]
 
-},
+}
 
 ];
 
