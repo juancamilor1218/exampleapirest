@@ -37,7 +37,15 @@ let products = [
 
 
 ];
+let warehouse[
+{
+id_company: 1,
+nombre: 'Exito',
+logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',
+direccion: 'Carrera 22B No. 2 - 56'
+}
 
+];
 
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',adrress:'Carrera 22B No. 2 - 56'},
