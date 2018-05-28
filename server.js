@@ -20,8 +20,7 @@ let users = [
 		name: 'Juan Riascos',
 		email: 'juancamilo971218@gmail.com',
 
-	}
-	
+	}	
 ];
 let products = [
     {id: 1, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: 'http://demos.pymesonline.co/panaderia/pasopan/images/stories/virtuemart/product/leche-colanta.jpg',idCompany: 1, ofert: 1},
@@ -103,7 +102,7 @@ name: 'Metro',
 logo: 'http://teconec.com/img/cliente03.png',
 adrress: 'Calle 11 No. 34 - 78 ',
 products:[
-	{id: 14, title: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,logo: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',idCompany: 4, ofert: 1}
+	{id: 14, title: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,logo: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',idCompany: 4, ofert: 1},
 	{id: 15, title: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,logo: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',idCompany: 4, ofert: 1},
    	{id: 16, title: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,logo: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',idCompany: 4, ofert: 0},
    	{id: 17, title: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,logo: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',idCompany: 4, ofert: 1},
