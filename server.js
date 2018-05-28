@@ -6,7 +6,23 @@ const app = express()
 const hostname = 'https://exampleapirest.herokuapp.com';
 const PORT = process.env.PORT || 5000
 
-let users = ['oscar', 'juan', 'marcos', 'julieta'];
+let users = [
+	{
+		username:'Esteban96' ,
+		pass: 'arepasconcaviar',
+		name: 'Esteban Jojoa',
+		email: 'estebanjojoa96@gmail.com',
+
+	},
+	{
+		username:'Juanr1218',
+		pass: 'juancarva',
+		name: 'Juan Riascos',
+		email: 'juancamilo971218@gmail.com',
+
+	}
+	
+];
 let products = [
     {id: 1, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: 'http://demos.pymesonline.co/panaderia/pasopan/images/stories/virtuemart/product/leche-colanta.jpg',idCompany: 1, ofert: 1},
     {id: 2, title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: 'http://www.tumercado.co/2845-large_default/arroz-supremo-excelso-tradicional-5000gr.jpg',idCompany: 1, ofert: 0},
@@ -29,7 +45,8 @@ let products = [
    	{id: 19, title: 'Arroz FlorHuila x5000gr', precio: 12990, marca: 'FlorHuila' ,logo: '',idCompany: 4, ofert: 0},
    	{id: 20, title: 'SixPack de Cerveza Poker', precio: 9990, marca: 'Poker' ,logo: '',idCompany: 4, ofert: 1},
    	{id: 21, title: 'SixPack de Cerveza Poker', precio: 9760, marca: 'Poker' ,logo: '',idCompany: 1, ofert: 0},
-   	{id: 22, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 7990, marca: 'Gillette' ,logo: '',idCompany: 4, ofert: 1},
+   
+   	{id: 21, title: 'SixPack de Cerveza Poker', precio: 9760, marca: 'Poker' ,logo: '',idCompany: 1, ofert: 0},
    	{id: 23, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 9863, marca: 'Gillette' ,logo: '',idCompany: 1, ofert: 0}
 
 
@@ -40,9 +57,9 @@ let products = [
 let warehouse=[
 {
 id_company: 1,
-nombre: 'Exito',
+name: 'Exito',
 logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',
-direccion: 'Carrera 22B No. 2 - 56',
+address: 'Carrera 22B No. 2 - 56',
 products:[
 			    {id: 1, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: 'http://demos.pymesonline.co/panaderia/pasopan/images/stories/virtuemart/product/leche-colanta.jpg',ofert: 1},
     			{id: 2, title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: 'http://www.tumercado.co/2845-large_default/arroz-supremo-excelso-tradicional-5000gr.jpg',ofert: 0},
@@ -59,9 +76,9 @@ products:[
 },
 {
 id_company: 2,
-nombre: 'Alkosto',
+name: 'Alkosto',
 logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',
-direccion: 'Carrera. 22 #628',
+adrress: 'Carrera. 22 #628',
 products:[
 			     {id: 11, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1320, marca: 'Colanta', logo: 'http://demos.pymesonline.co/panaderia/pasopan/images/stories/virtuemart/product/leche-colanta.jpg',idCompany: 2, ofert: 1},
    				{id: 12, title: 'Salchicha Mini Ranchera Premium X 300g', precio: 7300, marca: 'RANCHERA', logo: 'http://www.la14.com/Tiendala14/Images/product_images/136780.jpg',idCompany: 2, ofert: 0},
@@ -71,9 +88,9 @@ products:[
 {
 
 id_company: 3,
-nombre: 'Maximo',
+name: 'Maximo',
 logo: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg',
-direccion: 'calle 20 con, Av. de los Estudiantes #35',
+adrress: 'calle 20 con, Av. de los Estudiantes #35',
 products:[
 		
 	]
@@ -82,17 +99,17 @@ products:[
 {
 
 id_company: 4,
-nombre: 'Metro',
+name: 'Metro',
 logo: 'http://teconec.com/img/cliente03.png',
-direccion: 'Calle 11 No. 34 - 78 ',
+adrress: 'Calle 11 No. 34 - 78 ',
 products:[
-			     {id: 15, title: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,logo: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',idCompany: 4, ofert: 1},
+	{id: 14, title: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,logo: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',idCompany: 4, ofert: 1}
+	{id: 15, title: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,logo: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',idCompany: 4, ofert: 1},
    	{id: 16, title: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,logo: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',idCompany: 4, ofert: 0},
    	{id: 17, title: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,logo: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',idCompany: 4, ofert: 1},
-   	{id: 18, title: 'Salsa de Tomate San jorge x1000gr', precio: 5550, marca: 'San Jorge' ,logo:'',idCompany: 4, ofert: 1},
-   	{id: 19, title: 'Arroz FlorHuila x5000gr', precio: 12990, marca: 'FlorHuila' ,logo: '',idCompany: 4, ofert: 0},
-   	{id: 20, title: 'SixPack de Cerveza Poker', precio: 9990, marca: 'Poker' ,logo: '',idCompany: 4, ofert: 1},
-   	{id: 21, title: 'SixPack de Cerveza Poker', precio: 9760, marca: 'Poker' ,logo: '',idCompany: 1, ofert: 0},
+   	{id: 18, title: 'Salsa de Tomate San jorge x1000gr', precio: 5550, marca: 'San Jorge' ,logo:'', ofert: 1},
+   	{id: 19, title: 'Arroz FlorHuila x5000gr', precio: 12990, marca: 'FlorHuila' ,logo: '', ofert: 0},
+   	{id: 20, title: 'SixPack de Cerveza Poker', precio: 9990, marca: 'Poker' ,logo: '', ofert: 1},
    	{id: 22, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 7990, marca: 'Gillette' ,logo: '',idCompany: 4, ofert: 1}
 		
 	]
