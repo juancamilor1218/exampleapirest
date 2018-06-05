@@ -8,13 +8,15 @@ const PORT = process.env.PORT || 5000
 
 let users = [
 	{
+		id:0,
 		username:'Esteban96' ,
 		pass: 'arepasconcaviar',
 		name: 'Esteban Jojoa',
 		email: 'estebanjojoa96@gmail.com',
 
 	},
-	{
+	{	
+		id:1,
 		username:'Juanr1218',
 		pass: 'juancarva',
 		name: 'Juan Riascos',
@@ -136,18 +138,30 @@ app.get('/', (req, res) => {
     res.status(200).send("Welcome to API REST")
 })
 
-// URL para listar todos los usuarios
-// http://127.0.0.1:5000/users
-app.get('/users', (req, res) => {
-    res.send(users)
-})
+
 
 // URL para eliminar un usuario
 // http://127.0.0.1:5000/users
 app.post('/users', (req, res) => {
-    let data = req.query;
-    users.push(data.user_name)
-    res.send("New user add")
+     let data = req.body;
+    let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
+
+
+    users.some(function (value, index, _arr) {
+        if( (value.user == data.user) && (value.password == data.pass) ){
+            login[0]['searchUser'] = true;
+            login[0]['id'] = value.id;
+            login[0]['username'] = value.user;
+            login[0]['pass'] = value.password;
+            login[0]['name'] = value.name;
+            login[0]['email'] = value.email;
+            return true;
+        }else{
+            return false;
+        }
+    });
+
+    res.send(login)
 })
 
 // URL para actualizar un usuario
@@ -159,13 +173,6 @@ app.patch('/users/:id',(req, res) => {
     res.send("User update")
 })
 
-// URL para eliminar un usuario
-// http://127.0.0.1:5000/users/1
-app.delete('/users/:id',(req, res) => {
-    let params = req.params;
-    users.splice(params.id, 1);
-    res.send('User delete')
-})
 
 //********************************************************************
 //********************************************************************
@@ -174,19 +181,6 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
-app.patch('/products/:id',(req, res) => {
-    let params = req.params;
-    let data = req.query;
-    products[params.id] = data.user_name
-    res.send("products update")
-})
-
-
-app.delete('/productos/:id',(req, res) => {
-    let params = req.params;
-    products.splice(params.id, 1);
-    res.send('products delete')
-})
 
 // ********************************************************************
 // ********************************************************************
@@ -194,19 +188,6 @@ app.get('/company', (req, res) => {
     res.send(company)
 })
 
-app.patch('/company/:id',(req, res) => {
-    let params = req.params;
-    let data = req.query;
-    company[params.id] = data.user_name
-    res.send("company update")
-})
-
-
-app.delete('/company/:id',(req, res) => {
-    let params = req.params;
-    company.splice(params.id, 1);
-    res.send('company delete')
-})
 //*****************************************************
 //*************************************************************
 app.get('/warehouse', (req, res) => {
