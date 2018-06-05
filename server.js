@@ -144,7 +144,7 @@ app.get('/', (req, res) => {
 // http://127.0.0.1:5000/users
 app.post('/users', (req, res) => {
      let data = req.body;
-    let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
+    let login = [{searchUser: false,id: 0,username: '',pass: '',name: '',email: ''}];
 
 
     users.some(function (value, index, _arr) {
