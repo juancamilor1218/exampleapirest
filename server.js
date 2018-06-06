@@ -177,13 +177,13 @@ app.post('/signup', (req, res) => {
 
 app.post('/login', (req, res) => {
     let data = req.body;
-    let login = [{searchUser: false,id: '0',user: '',pass: '',name: '',email: ''}];
+    let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
 
     users.some(function (value, index, _arr) {
         if( (value.user == data.user) && (value.pass == data.pass) ){
             login[0]['searchUser'] = true;
             login[0]['id'] = value.id;
-            login[0]['user'] = value.user;
+            login[0]['username'] = value.user;
             login[0]['pass'] = value.pass;
             login[0]['name'] = value.name;
             login[0]['email'] = value.email;
