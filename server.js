@@ -143,27 +143,30 @@ app.get('/', (req, res) => {
 
 // URL para eliminar un usuario
 // http://127.0.0.1:5000/users
-app.post('/login', (req, res) => {
-     let data = req.body;
-    let login = [{searchUser: false,id: 0,username: '',pass: '',name: '',email: ''}];
-
-
-    users.some(function (value, index, _arr) {
-        if( (value.user == data.user) && (value.password == data.pass) ){
-            login[0]['searchUser'] = true;
-            login[0]['id'] = value.id;
-            login[0]['username'] = value.user;
-            login[0]['pass'] = value.password;
-            login[0]['name'] = value.name;
-            login[0]['email'] = value.email;
-            return true;
-        }else{
-            return false;
-        }
-    });
-
-    res.send(login)
+app.post('/signup', (req, res) => {
+    let data = req.body;
+    let consecutive = users.length;
+     let itemUser = {
+         id: consecutive,
+         username: data.username,
+         pass: data.pass,
+         name: data.name,
+         email: data.email,
+     };
+    /*
+    let itemUser = {
+        user: data.user,
+        password: data.pass,
+        name: data.name,
+        email: data.email,
+        repassword: '123'
+    };
+    */
+    users.push(itemUser)
+    res.send(itemUser)
+    // res.send("usuario creado correctamente")
 })
+
 
 // URL para actualizar un usuario
 // http://127.0.0.1:5000/users/1
@@ -174,7 +177,7 @@ app.post('/login', (req, res) => {
     let login = [{searchUser: false,id: '0',user: '',pass: '',name: '',email: ''}];
 
     users.some(function (value, index, _arr) {
-        if( (value.user == data.user) && (value.password == data.pass) ){
+        if( (value.user == data.user) && (value.pass == data.pass) ){
             login[0]['searchUser'] = true;
             login[0]['id'] = value.id;
             login[0]['user'] = value.username;
@@ -209,7 +212,7 @@ app.get('/company', (req, res) => {
 app.get('/warehouse', (req, res) => {
     res.send(warehouse)
 })
-
+  
 // Crear y lanzar el servidor
 http.createServer(app).listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
