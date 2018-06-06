@@ -24,6 +24,7 @@ let users = [
 
 	}	
 ];
+
 let products = [
     {id: 1, title: 'Leche Entera En Bolsa X 1 Litro', precio: 1456, marca: 'Colanta', logo: 'http://demos.pymesonline.co/panaderia/pasopan/images/stories/virtuemart/product/leche-colanta.jpg',idCompany: 1, ofert: 1},
     {id: 2, title: 'Arroz Excelso Tradicional', precio: 12200, marca: 'Supremo' ,logo: 'http://www.tumercado.co/2845-large_default/arroz-supremo-excelso-tradicional-5000gr.jpg',idCompany: 1, ofert: 0},
@@ -166,13 +167,28 @@ app.post('/users', (req, res) => {
 
 // URL para actualizar un usuario
 // http://127.0.0.1:5000/users/1
-app.patch('/users/:id',(req, res) => {
-    let params = req.params;
-    let data = req.query;
-    users[params.id] = data.user_name
-    res.send("User update")
-})
 
+
+app.post('/login', (req, res) => {
+    let data = req.body;
+    let login = [{searchUser: false,id: '0',user: '',pass: '',name: '',email: ''}];
+
+    users.some(function (value, index, _arr) {
+        if( (value.user == data.user) && (value.password == data.pass) ){
+            login[0]['searchUser'] = true;
+            login[0]['id'] = value.id;
+            login[0]['user'] = value.user;
+            login[0]['pass'] = value.pass;
+            login[0]['name'] = value.name;
+            login[0]['email'] = value.email;
+            return true;
+        }else{
+            return false;
+        }
+    });
+
+    res.send(login)
+})
 
 //********************************************************************
 //********************************************************************
