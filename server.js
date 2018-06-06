@@ -183,7 +183,7 @@ app.post('/login', (req, res) => {
         if( (value.user == data.user) && (value.pass == data.pass) ){
             login[0]['searchUser'] = true;
             login[0]['id'] = value.id;
-            login[0]['user'] = value.username;
+            login[0]['user'] = value.user;
             login[0]['pass'] = value.pass;
             login[0]['name'] = value.name;
             login[0]['email'] = value.email;
