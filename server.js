@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000
 let users = [
 	{
 		id:0,
-		user:'Esteban96' ,
+		username:'Esteban96' ,
 		pass: 'arepasconcaviar',
 		name: 'Esteban Jojoa',
 		email: 'estebanjojoa96@gmail.com',
@@ -17,7 +17,7 @@ let users = [
 	},
 	{	
 		id:1,
-		user:'Juanr1218',
+		username:'Juanr1218',
 		pass: 'juancarva',
 		name: 'Juan Riascos',
 		email: 'juancamilo971218@gmail.com',
@@ -178,7 +178,7 @@ app.post('/login', (req, res) => {
         if( (value.user == data.user) && (value.pass == data.pass) ){
             login[0]['searchUser'] = true;
             login[0]['id'] = value.id;
-            login[0]['user'] = value.user;
+            login[0]['username'] = value.user;
             login[0]['pass'] = value.pass;
             login[0]['name'] = value.name;
             login[0]['email'] = value.email;
