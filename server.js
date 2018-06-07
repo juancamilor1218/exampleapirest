@@ -50,11 +50,6 @@ let products = [
    
    	{id: 21, title: 'SixPack de Cerveza Poker', precio: 9760, marca: 'Poker' ,logo: '',idCompany: 1, ofert: 0},
    	{id: 23, title: 'Maquina de afeitar Prestobarba Ultragrip Gillette x 3 unidades', precio: 9863, marca: 'Gillette' ,logo: '',idCompany: 1, ofert: 0}
-
-
-
-
-
 ];
 let warehouse=[
 {
@@ -180,10 +175,10 @@ app.post('/login', (req, res) => {
     let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
 
     users.some(function (value, index, _arr) {
-        if( (value.user == data.user) && (value.pass == data.pass) ){
+        if( (value.username == data.user) && (value.pass == data.pass) ){
             login[0]['searchUser'] = true;
             login[0]['id'] = value.id;
-            login[0]['username'] = value.user;
+            login[0]['username'] = value.username;
             login[0]['pass'] = value.pass;
             login[0]['name'] = value.name;
             login[0]['email'] = value.email;
@@ -222,3 +217,17 @@ app.get('/warehouse', (req, res) => {
 http.createServer(app).listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
 })
+
+//*********************************************************************
+//Favoritos
+
+
+var favoritos =[
+
+
+
+
+
+
+
+];
