@@ -220,7 +220,9 @@ app.get('/products', (req, res) => {
 app.get('/company', (req, res) => {
     res.send(company)
 })
-
+app.get('/users', (req, res) => {
+    res.send(users)
+})
 //*****************************************************
 //*************************************************************
 app.get('/warehouse', (req, res) => {
