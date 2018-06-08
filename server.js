@@ -156,9 +156,8 @@ app.get('/', (req, res) => {
 // http://127.0.0.1:5000/users
 app.post('/signup', (req, res) => {
     let data = req.body;
- 	let itemUser={user:'',password:'',name:'',email:''};   
-    let consecutive = users.length;
-    /*
+	 let consecutive = users.length;
+	    
      let itemUser = {
          id: consecutive,
          username: data.username,
@@ -166,16 +165,16 @@ app.post('/signup', (req, res) => {
          name: data.name,
          email: data.email,
      };
-    */
-
     
+
+    /*
     let itemUser = {
         user: data.user,
         password: data.pass,
         name: data.name,
         email: data.email
     };
-    
+    */
     //users.push(itemUser)
     res.send(itemUser)
     // res.send("usuario creado correctamente")
