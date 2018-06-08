@@ -172,7 +172,7 @@ app.post('/signup', (req, res) => {
         email: data.email
     };
     
-    users.push(itemUser)
+    //users.push(itemUser)
     res.send(itemUser)
     // res.send("usuario creado correctamente")
 })
