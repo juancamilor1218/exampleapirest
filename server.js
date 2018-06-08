@@ -122,8 +122,7 @@ let company=[
 
 ];
 
-var favorite =[
-
+let favorite =[
 {
 	id:1,
 	id_product:1,
@@ -131,13 +130,11 @@ var favorite =[
 	id_user:1
 },
 {
-
 	id:2,
 	id_product:2,
 	id_company:1,
 	id_user:2
 }
-
 ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -235,7 +232,6 @@ app.post('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-	res.send(favorite.length);
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
 			console.log('entro al la condicion '+i);
@@ -257,10 +253,10 @@ app.get('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-	res.send('no entroal ciclo');
+	
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
-			console.log('entro al la condicion '+i);
+			res.send('entro al la condicion '+i);
 			let itemUser = {
 				name_product: products[favorite[i]['id_product']]['title'],
 				cost_product: products[favorite[i]['id_product']]['precio'],
