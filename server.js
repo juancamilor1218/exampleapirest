@@ -245,6 +245,7 @@ app.get('/favorite', (req, res) => {
 	let favoritetmp = [];	
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
+			console.log('entro al ciclo '+i)
 			let itemUser = {
 				name_product: products[favorite[i]['id_product']]['title'],
 				cost_product: products[favorite[i]['id_product']]['precio'],
