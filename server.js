@@ -163,7 +163,7 @@ app.post('/signup', (req, res) => {
          username: data.username,
          pass: data.pass,
          name: data.name,
-         email: data.email,
+         email: data.email
      };
     /*
     let itemUser = {
