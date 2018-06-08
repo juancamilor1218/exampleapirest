@@ -122,6 +122,23 @@ let company=[
 
 ];
 
+var favorites =[
+
+{
+	id:1,
+	id_product:1,
+	id_company:1,
+	id_user:1
+},
+{
+
+	id:2,
+	id_product:2,
+	id_company:1,
+	id_user:2
+}
+
+];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -213,6 +230,27 @@ app.get('/warehouse', (req, res) => {
     res.send(warehouse)
 })
   
+
+  
+  
+app.get('/favorite', (req, res) => {
+	let data = req.query;
+	let id_user = data.user;
+	let favoritetmp = [];	
+	for(let i=0; i < favorite.length; i++){
+		if(favorite[i]['id_user'] == id_user){
+			let itemUser = {
+				name_product: products[favorite[i]['id_product']]['title'];
+				cost_product: products[favorite[i]['id_product']]['precio'];
+				img_product: products[favorite[i]['id_product']]['logo'];
+				name_company: company[favorite[i]['id_company']]['name'];
+				img_company: company[favorite[i]['id_company']]['logo'];
+			};			
+			favoritetmp.push(itemUser);
+		}
+	}	
+    res.send(favoritetmp)
+})
 // Crear y lanzar el servidor
 http.createServer(app).listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
@@ -222,12 +260,4 @@ http.createServer(app).listen(PORT, () => {
 //Favoritos
 
 
-var favoritos =[
 
-
-
-
-
-
-
-];
