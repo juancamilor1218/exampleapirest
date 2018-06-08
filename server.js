@@ -250,7 +250,7 @@ app.post('/favorite', (req, res) => {
 		}
 	}	
     res.send(favoritetmp)
-    res.send(id_user)
+  
 })
   
 app.get('/favorite', (req, res) => {
