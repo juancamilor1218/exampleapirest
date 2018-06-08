@@ -167,6 +167,8 @@ app.post('/signup', (req, res) => {
          email: data.email,
      };
     */
+
+    
     let itemUser = {
         user: data.user,
         password: data.pass,
