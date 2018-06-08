@@ -229,7 +229,7 @@ app.get('/warehouse', (req, res) => {
   
 
 app.post('/favorite', (req, res) => {
-	let data = req.query;
+	let data = req.body;
 	let id_user = data.user;
 	let favoritetmp = [];	
 	for(let i=0; i < favorite.length; i++){
@@ -265,7 +265,7 @@ app.post('/favorite', (req, res) => {
 		}
 	}	
     res.send(favoritetmp)
-  
+ 
 })
 app.get('/favorite', (req, res) => {
 	let data = req.query;
