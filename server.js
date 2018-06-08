@@ -256,6 +256,7 @@ app.get('/favorite', (req, res) => {
 			favoritetmp.push(itemUser);
 		}
 	}	
+	console.log('entro al ciclo '+i);
     res.send(favoritetmp)
 })
 // Crear y lanzar el servidor
