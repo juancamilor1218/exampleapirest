@@ -234,7 +234,6 @@ app.post('/favorite', (req, res) => {
 	let favoritetmp = [];	
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
-			console.log('entro al la condicion '+i);
 			let itemUser = {
 				name_product: products[favorite[i]['id_product']]['title'],
 				cost_product: products[favorite[i]['id_product']]['precio'],
@@ -251,7 +250,7 @@ app.post('/favorite', (req, res) => {
   
 app.get('/favorite', (req, res) => {
 
-    res.send(favorite)
+    res.send(favorite.length);
 })
 // Crear y lanzar el servidor
 http.createServer(app).listen(PORT, () => {
