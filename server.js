@@ -244,16 +244,7 @@ app.get('/favorite', (req, res) => {
 	let id_user = data.user;
 	let favoritetmp = [];	
 	for(let i=0; i < favorite.length; i++){
-		if(favorite[i]['id_user'] == id_user){
-			let itemUser = {
-				name_product: products[favorite[i]['id_product']]['title'],
-				cost_product: products[favorite[i]['id_product']]['precio'],
-				img_product: products[favorite[i]['id_product']]['logo'],
-				name_company: company[favorite[i]['id_company']]['name'],
-				img_company: company[favorite[i]['id_company']]['logo']
-			};			
-			favoritetmp.push(itemUser);
-		}
+		
 	}	
     res.send(favoritetmp)
 })
