@@ -244,7 +244,9 @@ app.get('/favorite', (req, res) => {
 	let id_user = data.user;
 	let favoritetmp = [];	
 	for(let i=0; i < favorite.length; i++){
+		if(favorite[i]['id_user'] == id_user){
 		
+		}
 	}	
     res.send(favoritetmp)
 })
