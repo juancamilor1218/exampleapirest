@@ -122,7 +122,7 @@ let company=[
 
 ];
 
-var favorites =[
+var favorite =[
 
 {
 	id:1,
@@ -235,7 +235,7 @@ app.post('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-	res.send('no entroal ciclo')
+	res.send(favorite.length)
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
 			console.log('entro al la condicion '+i);
