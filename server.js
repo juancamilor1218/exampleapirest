@@ -235,7 +235,7 @@ app.post('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-s
+
     res.send(id_user)
 })
   
