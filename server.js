@@ -174,7 +174,6 @@ app.post('/signup', (req, res) => {
     };
     */
     users.push(itemUser)
-  //  res.send(itemUser)
      res.send("usuario creado correctamente")
 })
 
@@ -250,22 +249,16 @@ app.post('/favorite', (req, res) => {
 })
   
   app.post('/favoriteup', (req, res) => {
-	let data = req.query;
-	let id_user = data.user;
-	let favoritetmp = [];	
-	for(let i=0; i < favorite.length; i++){
-		if(favorite[i]['id_user'] == id_user){
-			let itemUser = {
-				name_product: products[favorite[i]['id_product']]['title'],
-				cost_product: products[favorite[i]['id_product']]['precio'],
-				img_product: products[favorite[i]['id_product']]['logo'],
-				name_company: company[favorite[i]['id_company']]['name'],
-				img_company: company[favorite[i]['id_company']]['logo']
-			};			
-			favoritetmp.push(itemUser);
-		}
-	}	
-    res.send(favoritetmp)
+	 let data = req.body;
+	 let consecutive = favorite.length;
+     let itemFavorite = {
+         id: consecutive,
+         id_product: data.id_product,
+         id_company: data.id_company,
+         id_user: data.id_user
+     };
+    favorite.push(itemFavorite)
+     res.send("añadido a favoritos")
  
 })
 app.get('/favorite', (req, res) => {
