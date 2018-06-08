@@ -154,7 +154,7 @@ app.get('/', (req, res) => {
 // http://127.0.0.1:5000/users
 app.post('/signup', (req, res) => {
     let data = req.body;
-    
+ 	let itemUser={user:'',password:'',name:'',email:''};   
     let consecutive = users.length;
     /*
      let itemUser = {
@@ -180,11 +180,6 @@ app.post('/signup', (req, res) => {
 
 // URL para actualizar un usuario
 // http://127.0.0.1:5000/users/1
-
-
-
-
-
 app.post('/login', (req, res) => {
     let data = req.body;
     let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
