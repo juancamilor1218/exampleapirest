@@ -235,15 +235,6 @@ app.post('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-
-    res.send(id_user)
-})
-  
-app.get('/favorite', (req, res) => {
-	let data = req.query;
-	let id_user = data.user;
-	let favoritetmp = [];	
-	console.log('no entro al ciclo ');
 	res.send('no entroal ciclo')
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
@@ -258,7 +249,28 @@ app.get('/favorite', (req, res) => {
 			favoritetmp.push(itemUser);
 		}
 	}	
-	console.log('entro al ciclo '+i);
+    res.send(favoritetmp)
+    res.send(id_user)
+})
+  
+app.get('/favorite', (req, res) => {
+	let data = req.query;
+	let id_user = data.user;
+	let favoritetmp = [];	
+	res.send('no entroal ciclo')
+	for(let i=0; i < favorite.length; i++){
+		if(favorite[i]['id_user'] == id_user){
+			console.log('entro al la condicion '+i);
+			let itemUser = {
+				name_product: products[favorite[i]['id_product']]['title'],
+				cost_product: products[favorite[i]['id_product']]['precio'],
+				img_product: products[favorite[i]['id_product']]['logo'],
+				name_company: company[favorite[i]['id_company']]['name'],
+				img_company: company[favorite[i]['id_company']]['logo']
+			};			
+			favoritetmp.push(itemUser);
+		}
+	}	
     res.send(favoritetmp)
 })
 // Crear y lanzar el servidor
