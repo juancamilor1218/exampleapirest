@@ -165,10 +165,6 @@ app.post('/signup', (req, res) => {
          name: data.name,
          email: data.email,
      };
-    
-
-    
-
     /*
     let itemUser = {
         user: data.user,
@@ -177,7 +173,7 @@ app.post('/signup', (req, res) => {
         email: data.email
     };
     */
-    //users.push(itemUser)
+    users.push(itemUser)
     res.send(itemUser)
     // res.send("usuario creado correctamente")
 })
