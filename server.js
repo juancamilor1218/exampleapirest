@@ -252,7 +252,7 @@ app.get('/favorite', (req, res) => {
 				name_company: company[favorite[i]['id_company']]['name'],
 				img_company: company[favorite[i]['id_company']]['logo']
 			};			
-			//favoritetmp.push(itemUser);
+			favoritetmp.push(itemUser);
 		}
 	}	
     res.send(favoritetmp)
