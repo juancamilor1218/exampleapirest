@@ -235,7 +235,7 @@ app.post('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-	res.send(favorite.length)
+	res.send(favorite.length);
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
 			console.log('entro al la condicion '+i);
@@ -257,7 +257,7 @@ app.get('/favorite', (req, res) => {
 	let data = req.query;
 	let id_user = data.user;
 	let favoritetmp = [];	
-	res.send('no entroal ciclo')
+	res.send('no entroal ciclo');
 	for(let i=0; i < favorite.length; i++){
 		if(favorite[i]['id_user'] == id_user){
 			console.log('entro al la condicion '+i);
