@@ -174,8 +174,8 @@ app.post('/signup', (req, res) => {
     };
     */
     users.push(itemUser)
-    res.send(itemUser)
-    // res.send("usuario creado correctamente")
+  //  res.send(itemUser)
+     res.send("usuario creado correctamente")
 })
 
 
