@@ -200,7 +200,20 @@ app.post('/login', (req, res) => {
 
     res.send(login)
 })
+app.post('/update', (req, res) => {
+    let data = req.body;
+    let update = [{id: '0',pass: ''}];
+    users.some(function (value, index, _arr) {
+        if( (value.id == data.id) && (value.pass == data.pass) ){
+            users[0]['pass'] = data.newpass;
+            return true;
+        }else{
+            return false;
+        }
+    });
 
+    res.send("usuario actualizado")
+})
 //********************************************************************
 //********************************************************************
 
