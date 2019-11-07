@@ -130,6 +130,24 @@ let favorite =[
 	id_user:2
 }
 ];
+let upsell=[
+        {
+            description:'Movistar',
+            image:'https://cdn.clubestudiantes.com/wp-content/uploads/2019/01/gameday-1.jpg'
+        },
+        {
+            description:'Movistar',
+            image:'https://cdn.clubestudiantes.com/wp-content/uploads/2019/01/gameday-1.jpg'
+        },
+        {
+            description:'Tigo',
+            image:'https://lh3.googleusercontent.com/Q6Ipdc3eVOWXTz6e1LQae_Uox3YfiR28_m97gR2A5R9dSYTIIRnsGif18QUnM1jtKO0MIuLleg=w600-h0'
+        },
+        {
+            description:'Hbo',
+            image:'https://media.biobiochile.cl/wp-content/uploads/2019/03/hbo.jpg'
+        }
+   ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -215,7 +233,9 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
-
+app.get('/upsell', (req, res) => {
+    res.send(upsell)
+})
 
 
 
