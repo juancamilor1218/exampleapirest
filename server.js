@@ -148,6 +148,23 @@ let upsell=[
             image:'https://media.biobiochile.cl/wp-content/uploads/2019/03/hbo.jpg'
         }
    ];
+let service=[
+        {
+            name:'120 canales',
+        },
+        {
+            name:'internet fibra optica',
+        },
+        {
+            name:'10 canales premium',
+        },
+        {
+            name:'servicio de streaming',
+        },
+	{
+            name:'datos moviles de 4gb',
+        }
+   ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -236,7 +253,9 @@ app.get('/products', (req, res) => {
 app.get('/upsell', (req, res) => {
     res.send(upsell)
 })
-
+app.get('/benefits', (req, res) => {
+    res.send(service)
+})
 
 
 
