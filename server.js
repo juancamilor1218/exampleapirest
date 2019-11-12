@@ -165,6 +165,28 @@ let service=[
             name:'datos moviles de 4gb',
         }
    ];
+let interest=[
+        {
+            name:'Gastronomia',
+	    icon:'https://cdn.zeplin.io/5d9e51641543b1300febb377/assets/2EA076CE-5B49-4377-94A0-6ADFBD1D2A96.svg'
+        },
+        {
+            name:'Jardineria',
+		icon:'https://cdn.zeplin.io/5d9e51641543b1300febb377/assets/2EA076CE-5B49-4377-94A0-6ADFBD1D2A96.svg'
+        },
+        {
+            name:'Adrenalina',
+		icon:'https://cdn.zeplin.io/5d9e51641543b1300febb377/assets/2EA076CE-5B49-4377-94A0-6ADFBD1D2A96.svg'
+        },
+        {
+            name:'Futbol',
+		icon:'https://cdn.zeplin.io/5d9e51641543b1300febb377/assets/2EA076CE-5B49-4377-94A0-6ADFBD1D2A96.svg'
+        },
+	{
+            name:'Viajes',
+		icon:'https://cdn.zeplin.io/5d9e51641543b1300febb377/assets/2EA076CE-5B49-4377-94A0-6ADFBD1D2A96.svg'
+        }
+   ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -272,7 +294,9 @@ app.get('/users', (req, res) => {
 app.get('/warehouse', (req, res) => {
     res.send(warehouse)
 })
-  
+app.get('/interest', (req, res) => {
+    res.send(interest)
+})
 
 app.post('/favorite', (req, res) => {
 	let data = req.body;
