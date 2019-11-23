@@ -187,6 +187,19 @@ let interest=[
 		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
         }
    ];
+let paymentmade=[
+        {
+            date: "2019-11-22T17:58:48.860Z",
+            deleted: false,
+            _id: "5dd8693d2103a138e8310331",
+            plan: "5dc03b1f6d7f0952f917d071",
+            payment_method: "5dcd7723d49d7f345eb13c2f",
+            user: "5da09e1ccef6e21a71afe7d2",
+            month: "noviembre",
+            made_on_date: "2019-11-22T23:03:25.078Z",
+            amount: 10000
+         }
+   ];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -277,6 +290,10 @@ app.get('/upsell', (req, res) => {
 })
 app.get('/benefits', (req, res) => {
     res.send(service)
+})
+
+app.get('/payments_made/plan/{id}', (req, res) => {
+    res.send(paymentmade)
 })
 
 
