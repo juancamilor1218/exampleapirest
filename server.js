@@ -292,7 +292,7 @@ app.get('/benefits', (req, res) => {
     res.send(service)
 })
 
-app.get('/payments_made/plan/{id}', (req, res) => {
+app.get('/payments_made/plan', (req, res) => {
     res.send(paymentmade)
 })
 
