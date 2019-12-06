@@ -300,6 +300,10 @@ app.get('/products', (req, res) => {
 app.get('/upsell', (req, res) => {
     res.send(upsell)
 })
+
+app.get('/crossell', (req, res) => {
+    res.send(crossell)
+})
 app.get('/benefits', (req, res) => {
     res.send(service)
 })
