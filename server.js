@@ -148,6 +148,18 @@ let upsell=[
             image:'https://media.biobiochile.cl/wp-content/uploads/2019/03/hbo.jpg'
         }
    ];
+let crossell=[
+        {
+            name:'CROSSELL 1',
+            image:'https://i.blogs.es/9c0e9b/modo-retrato/450_1000.jpg',
+	    price:200.3
+        },
+       {
+            name:'CROSSELL 2',
+            image:'https://i2.wp.com/juancarlosvelez.com/wp-content/uploads/2019/04/Hamburguesa-1.jpg?fit=1024%2C640&ssl=1',
+	    price:303.2
+        }        
+   ];
 let service=[
         {
             name:'120 canales',
