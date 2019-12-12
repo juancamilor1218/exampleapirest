@@ -169,7 +169,7 @@ let typeNotification=[
                 "_id": "5df2691ed0f87114c07bf1f8",
                 "name": "Estado de la asistencia",
                 "description": "Estado de la asistencia",
-                "IsActive": false
+                "IsActive": true
             }
         ]
     },
@@ -180,7 +180,7 @@ let typeNotification=[
             {
                 "_id": "5df2691ed0f87114c07bf1f8",
                 "name": "Estado de la asistencia",
-                "description": "Estado de la asistencia",
+                "description": "Promociones de planes",
                 "IsActive": false
             }
         ]
@@ -192,8 +192,8 @@ let typeNotification=[
             {
                 "_id": "5df2691ed0f87114c07bf1f8",
                 "name": "Estado de la asistencia",
-                "description": "Estado de la asistencia",
-                "IsActive": false
+                "description": "Morosidades",
+                "IsActive": true
             }
         ]
     }	
