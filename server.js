@@ -160,6 +160,44 @@ let crossell=[
 	    price:303.2
         }        
    ];
+let typeNotification=[
+        {
+        "_id": "5df2691ed0f87114c07bf1f7",
+        "categoryName": "Asistencias",
+        "notificationsType": [
+            {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Estado de la asistencia",
+                "IsActive": false
+            }
+        ]
+    },
+	 {
+        "_id": "5df2691ed0f87114c07bf1f7",
+        "categoryName": "Mis planes",
+        "notificationsType": [
+            {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Estado de la asistencia",
+                "IsActive": false
+            }
+        ]
+    },
+	 {
+        "_id": "5df2691ed0f87114c07bf1f7",
+        "categoryName": "Pagos",
+        "notificationsType": [
+            {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Estado de la asistencia",
+                "IsActive": false
+            }
+        ]
+    }	
+   ];
 let service=[
         {
             name:'120 canales',
@@ -300,7 +338,9 @@ app.get('/products', (req, res) => {
 app.get('/upsell', (req, res) => {
     res.send(upsell)
 })
-
+app.get('/typeNotification', (req, res) => {
+    res.send(typeNotification)
+})
 app.get('/crossell', (req, res) => {
     res.send(crossell)
 })
