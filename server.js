@@ -170,6 +170,12 @@ let typeNotification=[
                 "name": "Estado de la asistencia",
                 "description": "Estado de la asistencia",
                 "IsActive": true
+            },
+		 {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Estado de la asistencia",
+                "IsActive": false
             }
         ]
     },
