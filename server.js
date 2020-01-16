@@ -256,8 +256,33 @@ let paymentmade=[
             amount: 10000
          }
    ];
+
+let stepone=[
+       {
+	    number_case:12321,
+	    dateStart:"2020-01-16T04:00:00.000Z",
+	    dateEnd:"2020-01-16T05:30:00.000Z",
+	    typePlan:{
+		name:"telecomunicaciones",
+		_id:"5asdkjn2213b22iuh123"
+	    },
+	    typeFault:{
+		name:"Sin conexion",
+		id:"5asdkjn2213b22iuh123"
+	    },
+	    coordinates:{
+		lat:1.21231231,
+		lng:-1.092183120,
+		description:"Casa amarilla"
+	    }
+	}
+   ];
+
+ 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
 
 // ********************************************************************
 // ********************************************************************
@@ -341,6 +366,10 @@ app.get('/products', (req, res) => {
     res.send(products)
 })
 
+app.get('/stepone', (req, res) => {
+    res.send(stepone)
+})
+
 app.get('/upsell', (req, res) => {
     res.send(upsell)
 })
@@ -362,6 +391,9 @@ app.get('/payments_made/plan', (req, res) => {
 
 // ********************************************************************
 // ********************************************************************
+app.get('/company', (req, res) => {
+    res.send(company)
+})
 app.get('/company', (req, res) => {
     res.send(company)
 })
