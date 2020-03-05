@@ -272,13 +272,13 @@ let productsFanero=[
         ]
     }   
 ];		
-
+*/
 let productsBluetooth:[
 	{id: 20, nombre: 'Huawei P20 2019', precio: 350000, marca: 'Huawei' ,imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',descuento: 0.1},
 	{id: 21, nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 , marca: 'JBL' ,imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',descuento: 0.2},
 	{id: 22, nombre: 'parlante portable jbl flip', precio: 392802, marca: 'JBL' ,imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',descuento: 0}
 ];
-*/
+
 
 let paymentmade=[
         {
@@ -401,11 +401,11 @@ app.post('/update', (req, res) => {
 /*
 app.get('/categories', (req, res) => {
     res.send(productsFanero)
-})
+})*/
 
 app.get('/productsBluetooth', (req, res) => {
     res.send(productsBluetooth)
-})*/
+})
 app.get('/stepone', (req, res) => {
     res.send(stepone)
 })
