@@ -116,6 +116,14 @@ let company=[
 
 ];
 
+let companyFanero=[
+   {id: 1,nombre: 'Abraham Delgado',imagen: 'https://scontent.fpso2-1.fna.fbcdn.net/v/t1.0-0/cp0/e15/q65/p320x320/17309228_1612358722112239_6585266355204393792_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_ohc=AmFpU_WsnrsAX-IHDJd&_nc_ht=scontent.fpso2-1.fna&_nc_tp=3&oh=fccd8c57069bc5ef8d22e04a24e5629d&oe=5E94436A'},
+    {id: 2,nombre: 'Alkosto',imagen: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png'},
+    {id: 3,nombre: 'Maximo',imagen: 'http://pro2-bar-s3-cdn-cf.myportfolio.com/50baa4b829af2b7c87850739f2c0533b/151fea33a4ec2a8194e33f8e_rw_1920.jpg?h=59a4ccd524716052b39b619dc20cda56'},
+    {id: 4,nombre: 'Metro',imagen: 'http://teconec.com/img/cliente03.png'}
+
+];
+
 let favorite =[
 {
 	id:1,
@@ -243,21 +251,33 @@ let interest=[
 		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
         }
    ];
-let productsFanero=
-{
-	populares:[
-	{id: 14, nombre: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,imagen: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',descuento: 0.3},
-	{id: 15, nombre: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,imagen: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',descuento: 0.3},
-   	{id: 16, nombre: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,imagen: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',descuento: 0.1}
-	],
-	nuevo:[
-	    {id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',descuento: 0.1},
-	    {id: 6, nombre: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,imagen: 'http://www.exito.com/images/products/981/0000354862337981/0000354863975242_lrg_a.jpg',descuento: 0.1},
-	    {id: 7, nombre: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,imagen: 'http://tudeliveri.com/wp-content/uploads/2017/06/huevos.jpg',descuento: 0},
-	    {id: 8, nombre: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,imagen: 'http://www.alpinamarket.co/28-home_default/arequipe-220-gr.jpg',descuento: 0},
-	    {id: 9, nombre: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,imagen:'http://patojolandia.com/colombia01/tenderos/1376/cafe-aguila-roja-x-500-grs.jpg',descuento: 0}
-	]			
-}
+let productsFanero=[
+    {
+        nombre:'Nuevos Catalogos',
+        productos:[
+            {id: 14, nombre: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,imagen: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',descuento: 0.3},
+	        {id: 15, nombre: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,imagen: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',descuento: 0.3},
+   	        {id: 16, nombre: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,imagen: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',descuento: 0.1},
+            {id: 9, nombre: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,imagen:'http://patojolandia.com/colombia01/tenderos/1376/cafe-aguila-roja-x-500-grs.jpg',descuento: 0}
+        ]
+    },
+    {
+        nombre:'Nuevos Catalogos',
+        productos:[
+            	{id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',descuento: 0.1},
+		{id: 6, nombre: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,imagen: 'http://www.exito.com/images/products/981/0000354862337981/0000354863975242_lrg_a.jpg',descuento: 0.1},
+		{id: 7, nombre: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,imagen: 'http://tudeliveri.com/wp-content/uploads/2017/06/huevos.jpg',descuento: 0},
+	        {id: 8, nombre: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,imagen: 'http://www.alpinamarket.co/28-home_default/arequipe-220-gr.jpg',descuento: 0},
+        ]
+    }   
+]		
+
+let productsBluetooth:[
+	{id: 20, nombre: 'Huawei P20 2019', precio: 350000, marca: 'Huawei' ,imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',descuento: 0.1},
+	{id: 21, nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 , marca: 'JBL' ,imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',descuento: 0.2},
+	{id: 22, nombre: 'parlante portable jbl flip', precio: 392802, marca: 'JBL' ,imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',descuento: 0}
+]
+
 
 let paymentmade=[
         {
@@ -378,10 +398,13 @@ app.post('/update', (req, res) => {
 //********************************************************************
 //********************************************************************
 
-app.get('/products', (req, res) => {
+app.get('/categories', (req, res) => {
     res.send(productsFanero)
 })
 
+app.get('/productsbluetooth', (req, res) => {
+    res.send(productsBluetooth)
+})
 app.get('/stepone', (req, res) => {
     res.send(stepone)
 })
@@ -408,10 +431,7 @@ app.get('/payments_made/plan', (req, res) => {
 // ********************************************************************
 // ********************************************************************
 app.get('/company', (req, res) => {
-    res.send(company)
-})
-app.get('/company', (req, res) => {
-    res.send(company)
+    res.send(companyFanero)
 })
 app.get('/users', (req, res) => {
     res.send(users)
