@@ -397,10 +397,10 @@ app.post('/update', (req, res) => {
 })
 //********************************************************************
 //********************************************************************
-/*
+
 app.get('/categories', (req, res) => {
     res.send(productsFanero)
-})*/
+})
 
 app.get('/productsBluetooth', (req, res) => {
     res.send(productsBluetooth)
