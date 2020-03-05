@@ -251,6 +251,7 @@ let interest=[
 		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
         }
    ];
+/*
 let productsFanero=[
     {
         nombre:'Nuevos Catalogos',
@@ -277,7 +278,7 @@ let productsBluetooth:[
 	{id: 21, nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 , marca: 'JBL' ,imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',descuento: 0.2},
 	{id: 22, nombre: 'parlante portable jbl flip', precio: 392802, marca: 'JBL' ,imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',descuento: 0}
 ];
-
+*/
 
 let paymentmade=[
         {
@@ -397,14 +398,14 @@ app.post('/update', (req, res) => {
 })
 //********************************************************************
 //********************************************************************
-
+/*
 app.get('/categories', (req, res) => {
     res.send(productsFanero)
 })
 
 app.get('/productsBluetooth', (req, res) => {
     res.send(productsBluetooth)
-})
+})*/
 app.get('/stepone', (req, res) => {
     res.send(stepone)
 })
