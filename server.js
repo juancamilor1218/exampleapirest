@@ -273,44 +273,49 @@ let productsFanero=[
     }   
 ];		
 
-
-let productsBluetooth=[
+let bluetooth=[
 	{
-        id: 20,
-        nombre: 'Huawei P20 2019',
-        precio: 350000, marca: 'Huawei',
-        imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
-        descuento: 0.1,
-        bluetooth:{
+		
             id:1,
             mac:"DC:0D:30:48:46:A2",
-            nombre:"Tienda 1"
-        }
-    },
+            nombre:"Tienda 1",
+ 	    rssi:0,
+	    uuid:1	
+	},
 	{
+	    id:2,
+            mac:"DC:0D:30:48:46:09",
+            nombre:"Tienda 1",
+	    rssi:0,
+	    uuid:1
+	}
+	  
+];
+
+let productsBluetooth=[
+    {
+        id: 20,
+        nombre: 'Huawei P20 2019',
+        precio: 350000,
+    	marca: 'Huawei',
+        imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
+        descuento: 0.1
+       
+     },
+     {
         id: 21,
         nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 ,
         marca: 'JBL' ,
         imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',
         descuento: 0.2,
-        bluetooth:{
-            id:2,
-            mac:"DC:0D:30:48:46:09",
-            nombre:"Tienda 1"
-        }
     },
-	{
+    {
         id: 22,
         nombre: 'parlante portable jbl flip',
         precio: 392802,
         marca: 'JBL',
         imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',
         descuento: 0,
-        bluetooth:{
-            id:3,
-            mac:"15:1D:63:82:79:F4",
-            nombre:"Tienda 1"
-        }
     }
 ];
 
@@ -438,9 +443,14 @@ app.get('/categories', (req, res) => {
     res.send(productsFanero)
 })
 
-app.get('/productsBluetooth', (req, res) => {
+app.post('/productsBluetooth', (req, res) => {
     res.send(productsBluetooth)
 })
+
+app.get('/bluetooth', (req, res) => {
+    res.send(bluetooth)
+})
+
 app.get('/stepone', (req, res) => {
     res.send(stepone) 
 })
