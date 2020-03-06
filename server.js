@@ -272,6 +272,8 @@ let productsFanero=[
         ]
     }   
 ];		
+
+
 let productsBluetooth=[
 	{
         id: 20,
@@ -281,7 +283,7 @@ let productsBluetooth=[
         descuento: 0.1,
         bluetooth:{
             id:1,
-            mac:"23:1B:63:84:5B:21",
+            mac:"DC:0D:30:48:46:A2",
             nombre:"Tienda 1"
         }
     },
@@ -293,7 +295,7 @@ let productsBluetooth=[
         descuento: 0.2,
         bluetooth:{
             id:2,
-            mac:"34:2C:54:73:6A:13",
+            mac:"DC:0D:30:48:46:09",
             nombre:"Tienda 1"
         }
     },
