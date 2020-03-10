@@ -257,18 +257,18 @@ let productsFanero=[
         nombre:'Nuevos Catalogos',
         productos:[
             {id: 14, nombre: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,imagen: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',descuento: 0.3},
-	        {id: 15, nombre: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,imagen: 'http://www.carulla.com/images/products/964/0000046361049964/0000046362013298_lrg_a.jpg',descuento: 0.3},
-   	        {id: 16, nombre: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,imagen: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',descuento: 0.1},
-            {id: 9, nombre: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,imagen:'http://patojolandia.com/colombia01/tenderos/1376/cafe-aguila-roja-x-500-grs.jpg',descuento: 0}
+	        {id: 15, nombre: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/225648-750-750/7701101245903.jpg',descuento: 0.3},
+   	        {id: 16, nombre: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/196257-750-750/7701018007267.jpg',descuento: 0.1},
+            {id: 9, nombre: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,imagen:'https://mercalo.co/wp-content/uploads/2017/04/Fr%C3%ADjol-cargamanto-blanco-Aburr%C3%A1-460gr.jpg',descuento: 0}
         ]
     },
     {
         nombre:'Mas solicitados',
         productos:[
-            	{id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',descuento: 0.1},
-		{id: 6, nombre: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,imagen: 'http://www.exito.com/images/products/981/0000354862337981/0000354863975242_lrg_a.jpg',descuento: 0.1},
-		{id: 7, nombre: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,imagen: 'http://tudeliveri.com/wp-content/uploads/2017/06/huevos.jpg',descuento: 0},
-	        {id: 8, nombre: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,imagen: 'http://www.alpinamarket.co/28-home_default/arequipe-220-gr.jpg',descuento: 0},
+            	{id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/196257-750-750/7701018007267.jpg',descuento: 0.1},
+		{id: 6, nombre: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,imagen: 'https://cdn.totalcode.com/la14/product-zoom/es/tortilla-blanca-bimbo-tradicional-x-8-undx240g-1.jpg',descuento: 0.1},
+		{id: 7, nombre: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,imagen: 'https://avinal.com.co/wp-content/uploads/2017/10/huevo-rojo-extra-x-30-unidades.png',descuento: 0},
+	        {id: 8, nombre: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,imagen: 'https://cdn.shopify.com/s/files/1/0272/6730/1424/products/arequipe-alpina-10-unidades-D_NQ_NP_683070-MLV31977981878_082019-F_637x.jpg',descuento: 0},
         ]
     }   
 ];		
@@ -298,7 +298,7 @@ let productsBluetooth=[
         nombre: 'Huawei P20 2019',
         precio: 350000,
     	marca: 'Huawei',
-        imagen: 'http://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
+        imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
         descuento: 0.1
        
      },
@@ -306,7 +306,7 @@ let productsBluetooth=[
         id: 21,
         nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 ,
         marca: 'JBL' ,
-        imagen: 'http://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',
+        imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',
         descuento: 0.2,
     },
     {
@@ -314,7 +314,7 @@ let productsBluetooth=[
         nombre: 'parlante portable jbl flip',
         precio: 392802,
         marca: 'JBL',
-        imagen: 'http://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',
+        imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',
         descuento: 0,
     }
 ];
