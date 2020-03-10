@@ -265,7 +265,7 @@ let productsFanero=[
     {
         nombre:'Mas solicitados',
         productos:[
-            	{id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',descuento: 0.1},
+            	{id: 17, nombre: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,imagen: 'http://rapimercar.adsipyme.com/329252-large_default/aceite-de-girasol-premier-3000ml.jpg',descuento: 0.1},
 		{id: 6, nombre: 'Tortilla Blanca X 8 Unidades', precio: 7544 , marca: 'BIMBO' ,imagen: 'http://www.exito.com/images/products/981/0000354862337981/0000354863975242_lrg_a.jpg',descuento: 0.1},
 		{id: 7, nombre: 'Huevo Rojo A X 30 Insuperable', precio: 7980, marca: 'SMN' ,imagen: 'http://tudeliveri.com/wp-content/uploads/2017/06/huevos.jpg',descuento: 0},
 	        {id: 8, nombre: 'Arequipe Alpina 220 Grs', precio: 4690, marca: 'Alpina' ,imagen: 'http://www.alpinamarket.co/28-home_default/arequipe-220-gr.jpg',descuento: 0},
@@ -298,7 +298,7 @@ let productsBluetooth=[
         nombre: 'Huawei P20 2019',
         precio: 350000,
     	marca: 'Huawei',
-        imagen: 'https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
+        imagen: 'http://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/h/w/hw_p20_pro_twilight_6901443236817_01.jpg',
         descuento: 0.1
        
      },
@@ -306,7 +306,7 @@ let productsBluetooth=[
         id: 21,
         nombre: 'Audifonos Diadema Trust Ziva', precio: 230422 ,
         marca: 'JBL' ,
-        imagen: 'https://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',
+        imagen: 'http://teknopolis.vteximg.com.br/arquivos/ids/177036-1000-1000/Audifonos-Diadema-Trust-Ziva-Bluetooth_01.jpg',
         descuento: 0.2,
     },
     {
@@ -314,7 +314,7 @@ let productsBluetooth=[
         nombre: 'parlante portable jbl flip',
         precio: 392802,
         marca: 'JBL',
-        imagen: 'https://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',
+        imagen: 'http://http2.mlstatic.com/parlante-portable-jbl-flip-4-bluetooth-12-horas-sumergible-D_NQ_NP_725732-MCO40384756593_012020-F.jpg',
         descuento: 0,
     }
 ];
