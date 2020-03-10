@@ -256,7 +256,7 @@ let productsFanero=[
     {
         nombre:'Nuevos Catalogos',
         productos:[
-            {id: 14, nombre: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,imagen: 'http://assalam-market.com/shop/image/cache/data/productos/Latinos/Colombia/Chocolate%20de%20mesa%20con%20az%C3%BAcar%20Corona%20500%20gr-500x500.jpg',descuento: 0.3},
+            {id: 14, nombre: 'Chocolate Corona x 500gr', precio: 4990, marca: 'Corona' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/177423-750-750/7702007043402-1.jpg',descuento: 0.3},
 	        {id: 15, nombre: 'Salchicha Viena Zenu x150 gr', precio: 2590, marca: 'Zenu' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/225648-750-750/7701101245903.jpg',descuento: 0.3},
    	        {id: 16, nombre: 'Aceite Premier 3000 ml', precio: 27990, marca: 'Premier' ,imagen: 'https://jumbocolombiafood.vteximg.com.br/arquivos/ids/196257-750-750/7701018007267.jpg',descuento: 0.1},
             {id: 9, nombre: 'Frijol Cargamanto Blanco Bolsa X 1000 G', precio: 7990, marca: 'EXITO MARCA PROPIA' ,imagen:'https://mercalo.co/wp-content/uploads/2017/04/Fr%C3%ADjol-cargamanto-blanco-Aburr%C3%A1-460gr.jpg',descuento: 0}
