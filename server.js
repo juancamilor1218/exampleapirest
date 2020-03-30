@@ -292,6 +292,57 @@ let bluetooth=[
 	  
 ];
 
+let direcciones=[
+
+    {
+        "id": 24,
+        "tipoIdetificacion": "CE",
+        "numeroDocumento": "9999999",
+        "nombres": "Weimar",
+        "apellidos": "Gomez Cordoba",
+        "telefonoContacto": "123456789",
+        "nomenclatura": "Cl. 21a #4e05",
+        "barrio": "Santa Bárbara",
+        "telefonoDireccion": "3128720023",
+        "nombreRecibe": "WEIMAR GOMEZ",
+        "latitud": "1.201074",
+        "longitud": "-77.259363",
+        "esPrincipal": "Si"
+    },
+    {
+        "id": 24,
+        "tipoIdetificacion": "CE",
+        "numeroDocumento": "9999999",
+        "nombres": "Weimar",
+        "apellidos": "Gomez Cordoba",
+        "telefonoContacto": "123456789",
+        "nomenclatura": "Cl. 21j #9a Este-1 a 9a Este-183",
+        "barrio": "Condominio santa monica",
+        "telefonoDireccion": "3148336485",
+        "nombreRecibe": "NATALIA CERON",
+        "latitud": "1.205089",
+        "longitud": "-77.254318",
+        "esPrincipal": "No"
+    },
+    {
+        "id": 24,
+        "tipoIdetificacion": "CE",
+        "numeroDocumento": "9999999",
+        "nombres": "Weimar",
+        "apellidos": "Gomez Cordoba",
+        "telefonoContacto": "123456789",
+        "nomenclatura": "Cll 57",
+        "barrio": "Chapinero",
+        "telefonoDireccion": "78910",
+        "nombreRecibe": "Pepito Perez",
+        "latitud": "1.509876",
+        "longitud": "-74.4657855",
+        "esPrincipal": "Si"
+    }
+
+
+]
+
 let productsBluetooth=[
     {
         id: 20,
@@ -449,6 +500,10 @@ app.post('/productsBluetooth', (req, res) => {
 
 app.get('/bluetooth', (req, res) => {
     res.send(bluetooth)
+})
+
+app.get('/direccionPersona/DireccionesAsociadas', (req, res) => {
+    res.send(direcciones)
 })
 
 app.get('/stepone', (req, res) => {
