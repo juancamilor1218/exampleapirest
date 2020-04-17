@@ -156,6 +156,110 @@ let upsell=[
             image:'https://media.biobiochile.cl/wp-content/uploads/2019/03/hbo.jpg'
         }
    ];
+let bancos=
+{
+    "success": true,
+    "title_response": "SUCCESS",
+    "text_response": "Bancos Consultados Exitosamente",
+    "last_action": "Query Bancos",
+    "data": [
+        {
+            "bankCode": "0",
+            "bankName": "A continuación seleccione su banco"
+        },
+        {
+            "bankCode": "1040",
+            "bankName": "BANCO AGRARIO"
+        },
+        {
+            "bankCode": "1052",
+            "bankName": "BANCO AV VILLAS"
+        },
+        {
+            "bankCode": "1013",
+            "bankName": "BANCO BBVA COLOMBIA S.A."
+        },
+        {
+            "bankCode": "1032",
+            "bankName": "BANCO CAJA SOCIAL"
+        },
+        {
+            "bankCode": "1066",
+            "bankName": "BANCO COOPERATIVO COOPCENTRAL"
+        },
+        {
+            "bankCode": "1051",
+            "bankName": "BANCO DAVIVIENDA"
+        },
+        {
+            "bankCode": "1001",
+            "bankName": "BANCO DE BOGOTA"
+        },
+        {
+            "bankCode": "1023",
+            "bankName": "BANCO DE OCCIDENTE"
+        },
+        {
+            "bankCode": "1062",
+            "bankName": "BANCO FALABELLA "
+        },
+        {
+            "bankCode": "1012",
+            "bankName": "BANCO GNB SUDAMERIS"
+        },
+        {
+            "bankCode": "1006",
+            "bankName": "BANCO ITAU"
+        },
+        {
+            "bankCode": "1060",
+            "bankName": "BANCO PICHINCHA S.A."
+        },
+        {
+            "bankCode": "1002",
+            "bankName": "BANCO POPULAR"
+        },
+        {
+            "bankCode": "1058",
+            "bankName": "BANCO PROCREDIT"
+        },
+        {
+            "bankCode": "1065",
+            "bankName": "BANCO SANTANDER COLOMBIA"
+        },
+        {
+            "bankCode": "1007",
+            "bankName": "BANCOLOMBIA"
+        },
+        {
+            "bankCode": "1061",
+            "bankName": "BANCOOMEVA S.A."
+        },
+        {
+            "bankCode": "1009",
+            "bankName": "CITIBANK "
+        },
+        {
+            "bankCode": "1292",
+            "bankName": "CONFIAR COOPERATIVA FINANCIERA"
+        },
+        {
+            "bankCode": "1551",
+            "bankName": "DAVIPLATA"
+        },
+        {
+            "bankCode": "1507",
+            "bankName": "NEQUI"
+        },
+        {
+            "bankCode": "1019",
+            "bankName": "SCOTIABANK COLPATRIA"
+        }
+    ],
+    "enpruebas": 2
+};
+
+
 let crossell=[
         {
             name:'CROSSELL 1',
@@ -500,6 +604,10 @@ app.post('/productsBluetooth', (req, res) => {
 
 app.get('/bluetooth', (req, res) => {
     res.send(bluetooth)
+})
+
+app.get('/bancos' (req, res) => {
+    res.send(bancos)
 })
 
 app.get('/direccionPersona/DireccionesAsociadas', (req, res) => {
