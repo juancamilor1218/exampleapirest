@@ -156,19 +156,16 @@ let upsell=[
             image:'https://media.biobiochile.cl/wp-content/uploads/2019/03/hbo.jpg'
         }
    ];
-let bancos={
-    success: true,
-    title_response: "SUCCESS",
-    text_response: "Bancos Consultados Exitosamente",
-    last_action: "Query Bancos",
-    data: [
+let bancos=
+   
+    [
         {
             bankCode: "0",
             bankName: "A continuación seleccione su banco"
         }
-    ],
-    enpruebas: 2
-}
+    ];
+
+
 
 
 let crossell=[
