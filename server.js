@@ -108,6 +108,10 @@ products:[
 }
 ];
 
+let auth={
+  authorize:"ok"	
+}
+
 let company=[
 {id: 1,name: 'Exito',logo: 'http://beaconstock.com/portal/wp-content/uploads/2013/09/Grupo_Exito_logo.svg_.png',adrress:'Carrera 22B No. 2 - 56'},
 {id: 2,name: 'Alkosto',logo: 'http://www.alkosto.com/media/ALKOSTO/Especiales/plan0es3ac2.png',adrress:'Carrera. 22 #628'},
@@ -524,6 +528,10 @@ app.get('/direccionPersona/DireccionesAsociadas', (req, res) => {
 
 app.get('/stepone', (req, res) => {
     res.send(stepone) 
+})
+
+app.post('/login/v1/validate', (req, res) => {
+    res.send(auth) 
 })
 
 app.get('/upsell', (req, res) => {
