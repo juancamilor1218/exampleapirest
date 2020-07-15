@@ -166,3 +166,275 @@ let typeNotification=[
             }
         ]
     },
+	 {
+        "_id": "5df2691ed0f87114c07bf1f7",
+        "categoryName": "Mis planes",
+        "notificationsType": [
+            {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Promociones de planes",
+                "IsActive": false
+            }
+        ]
+    },
+	 {
+        "_id": "5df2691ed0f87114c07bf1f7",
+        "categoryName": "Pagos",
+        "notificationsType": [
+            {
+                "_id": "5df2691ed0f87114c07bf1f8",
+                "name": "Estado de la asistencia",
+                "description": "Morosidades",
+                "IsActive": true
+            }
+        ]
+    }	
+   ];
+let service=[
+        {
+            name:'120 canales',
+        },
+        {
+            name:'internet fibra optica',
+        },
+        {
+            name:'10 canales premium',
+        },
+        {
+            name:'servicio de streaming',
+        },
+	{
+            name:'datos moviles de 4gb',
+        }
+   ];
+let interest=[
+        {
+            name:'Gastronomia',
+	    icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
+        },
+        {
+            name:'Jardineria',
+		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
+        },
+        {
+            name:'Adrenalina',
+		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
+        },
+        {
+            name:'Futbol',
+		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
+        },
+	{
+            name:'Viajes',
+		icon:'https://img.icons8.com/material/4ac144/256/facebook.png'
+        }
+   ];
+let paymentmade=[
+        {
+            date: "2019-11-22T17:58:48.860Z",
+            deleted: false,
+            _id: "5dd8693d2103a138e8310331",
+            plan: "5dc03b1f6d7f0952f917d071",
+            payment_method: "5dcd7723d49d7f345eb13c2f",
+            user: "5da09e1ccef6e21a71afe7d2",
+            month: "noviembre",
+            made_on_date: "2019-11-22T23:03:25.078Z",
+            amount: 10000
+         }
+   ];
+
+let stepone=[
+       {
+	    number_case:12321,
+	    dateStart:"2020-01-16T04:00:00.000Z",
+	    dateEnd:"2020-01-16T05:30:00.000Z",
+	    typePlan:{
+		name:"telecomunicaciones",
+		_id:"5asdkjn2213b22iuh123"
+	    },
+	    typeFault:{
+		name:"Sin conexion",
+		id:"5asdkjn2213b22iuh123"
+	    },
+	    coordinates:{
+		lat:1.21231231,
+		lng:-1.092183120,
+		description:"Casa amarilla"
+	    }
+	}
+   ];
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
+// ********************************************************************
+// ********************************************************************
+
+// URL raiz de la api
+// http://127.0.0.1:5000
+app.get('/', (req, res) => {
+    res.status(200).send("Welcome to API REST")
+})
+// URL para eliminar un usuario
+// http://127.0.0.1:5000/users
+app.post('/signup', (req, res) => {
+    let data = req.body;
+	 let consecutive = users.length;
+	    
+     let itemUser = {
+         id: consecutive,
+         username: data.username,
+         pass: data.pass,
+         name: data.name,
+         email: data.email
+     };
+    /*
+    let itemUser = {
+        user: data.user,
+        password: data.pass,
+        name: data.name,
+        email: data.email
+    };
+    */
+    users.push(itemUser)
+     res.send("usuario creado correctamente")
+})
+// URL para actualizar un usuario
+// http://127.0.0.1:5000/users/1
+app.post('/login', (req, res) => {
+    let data = req.body;
+    let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
+    users.some(function (value, index, _arr) {
+        if( (value.user == data.user) && (value.pass == data.pass) ){
+            login[0]['searchUser'] = true;
+            login[0]['id'] = value.id;
+            login[0]['username'] = value.username;
+            login[0]['pass'] = value.pass;
+            login[0]['name'] = value.name;
+            login[0]['email'] = value.email;
+            return true;
+        }else{
+            return false;
+        }
+    });
+    res.send(login)
+})
+app.post('/update', (req, res) => {
+    let data = req.body;
+    let update = [{id: '0',pass: ''}];
+    users.some(function (value, index, _arr) {
+        if( (value.id == data.id) && (value.pass == data.pass) ){
+            users[0]['pass'] = data.newpass;
+            return true;
+        }else{
+            return false;
+        }
+    });
+    res.send("usuario actualizado")
+})
+//********************************************************************
+//********************************************************************
+app.get('/products', (req, res) => {
+    res.send(products)
+})
+
+app.get('/stepone', (req, res) => {
+    res.send(stepone)
+})
+
+app.get('/upsell', (req, res) => {
+    res.send(upsell)
+})
+app.get('/typeNotification', (req, res) => {
+    res.send(typeNotification)
+})
+app.get('/crossell', (req, res) => {
+    res.send(crossell)
+})
+app.get('/benefits', (req, res) => {
+    res.send(service)
+})
+app.get('/payments_made/plan', (req, res) => {
+    res.send(paymentmade)
+})
+// ********************************************************************
+// ********************************************************************
+app.get('/company', (req, res) => {
+    res.send(company)
+})
+app.get('/company', (req, res) => {
+    res.send(company)
+})
+app.get('/users', (req, res) => {
+    res.send(users)
+})
+//*****************************************************
+//*************************************************************
+app.get('/warehouse', (req, res) => {
+    res.send(warehouse)
+})
+app.get('/interest', (req, res) => {
+    res.send(interest)
+})
+app.post('/favorite', (req, res) => {
+	let data = req.body;
+	let id_user = data.user;
+	let favoritetmp = [];	
+	for(let i=0; i < favorite.length; i++){
+		if(favorite[i]['id_user'] == id_user){
+			let itemUser = {
+				name_product: products[favorite[i]['id_product']]['title'],
+				cost_product: products[favorite[i]['id_product']]['precio'],
+				img_product: products[favorite[i]['id_product']]['logo'],
+				name_company: company[favorite[i]['id_company']]['name'],
+				img_company: company[favorite[i]['id_company']]['logo']
+			};			
+			favoritetmp.push(itemUser);
+		}
+	}	
+    res.send(favoritetmp)
+  
+})
+  
+  app.post('/favoriteup', (req, res) => {
+	 let data = req.body;
+	 let consecutive = favorite.length;
+     let itemFavorite = {
+         id: consecutive,
+         id_product: data.id_product,
+         id_company: data.id_company,
+         id_user: data.id_user
+     };
+    favorite.push(itemFavorite)
+     res.send("añadido a favoritos")
+ 
+})
+app.get('/favorite', (req, res) => {
+	let data = req.query;
+	let id_user = data.user;
+	let favoritetmp = [];	
+	for(let i=0; i < favorite.length; i++){
+		if(favorite[i]['id_user'] == id_user){
+			let itemUser = {
+				name_product: products[favorite[i]['id_product']]['title'],
+				cost_product: products[favorite[i]['id_product']]['precio'],
+				img_product: products[favorite[i]['id_product']]['logo'],
+				name_company: company[favorite[i]['id_company']]['name'],
+				img_company: company[favorite[i]['id_company']]['logo']
+			};			
+			favoritetmp.push(itemUser);
+		}
+	}	
+    res.send(favoritetmp)
+    
+})
+// Crear y lanzar el servidor
+http.createServer(app).listen(PORT, () => {
+    console.log(`Server running at http://${hostname}:${PORT}/`);
+})
+//*********************************************************************
+//Favoritos
