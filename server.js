@@ -277,6 +277,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // URL raiz de la api
 // http://127.0.0.1:5000
 app.get('/', (req, res) => {
+   res.header("Access-Control-Allow-Origin", "*");
     res.status(200).send("Welcome to API REST")
 })
 // URL para eliminar un usuario
@@ -307,6 +308,7 @@ app.post('/signup', (req, res) => {
 // http://127.0.0.1:5000/users/1
 app.post('/login', (req, res) => {
     let data = req.body;
+    res.header("Access-Control-Allow-Origin", "*");
     let login = [{searchUser: false,id: '0',username: '',pass: '',name: '',email: ''}];
     users.some(function (value, index, _arr) {
         if( (value.user == data.user) && (value.pass == data.pass) ){
