@@ -40,6 +40,30 @@ let products = [
    	{id: 17, title: 'Aceite Girasol Metro 5000 ml', precio: 28990, marca: 'Girasol' ,logo: 'https://s3-sa-east-1.amazonaws.com/bunting-product-images-sa-east-1/grupoexito/42405/image-s.jpg',idCompany: 4, ofert: 1}
    	
 ];
+
+let categoriesWM={
+    responseCode: "200",
+    data: [
+        {
+            Category_Id: 9,
+            Name: "Servicios Públicos",
+            Logo: "https://centroamerica.walmart.com/images/formobile/disclaimner/MC_CablerasEInternet.svg",
+            Country_Code_Id: 1,
+            Country_Code_Home: "CRC",
+            Format_Id: 1
+        },
+        {
+            Category_Id: 10,
+            Name: "Cableras e Internet",
+            Logo: "https://centroamerica.walmart.com/images/formobile/disclaimner/MC_AbonosTarjetas.svg",
+            Country_Code_Id: 1,
+            Country_Code_Home: "CRC",
+            Format_Id: 1
+        }
+    ]
+}
+
+
 let warehouse=[
 {
 id_company: 1,
@@ -378,6 +402,10 @@ app.get('/users', (req, res) => {
 //*************************************************************
 app.get('/warehouse', (req, res) => {
     res.send(warehouse)
+})
+
+app.get('/categoriesWM', (req, res) => {
+    res.send(categoriesWM)
 })
 app.get('/interest', (req, res) => {
     res.send(interest)
