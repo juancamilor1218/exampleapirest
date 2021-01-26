@@ -528,12 +528,13 @@ app.get('/countryRegex', (req, res) => {
 let id = req.query.page;
  users.some(function (value, index, _arr) {
         if( (value.id == id)){           
-            return true;
+            return value;
         }else{
             return {};
         }
-    res.send(countryFormat)
+    
  })
+res.send(countryFormat)
 })
 
 app.post('/favorite', (req, res) => {
