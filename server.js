@@ -525,7 +525,15 @@ app.get('/interest', (req, res) => {
     res.send(interest)
 })
 app.get('/countryRegex', (req, res) => {
+let id = req.query.page;
+ users.some(function (value, index, _arr) {
+        if( (value.id == id)){           
+            return true;
+        }else{
+            return {};
+        }
     res.send(countryFormat)
+ })
 })
 
 app.post('/favorite', (req, res) => {
