@@ -147,7 +147,7 @@ let countryFormat =[
 		id:1,
 		code:'CR',
 		types:[
-			{
+				{
 				id:1,
                 name:'Cédula Nacional',
                 regex:'^[1-9][0-9]{8}$'
@@ -155,13 +155,13 @@ let countryFormat =[
             {
 				id:2,
                 name:'Pasaporte',
-                regex:'^[1-9][0-9]{8}$'
+                regex:'^[A-Z0-9\-]+$'
             },
             {
 				id:3,
                 name:'Cédula de Residencia',
-                regex:'^[1-9][0-9]{8}$'
-            }            
+                regex:'^([A-Z0-9]{17}$)|([0-9]{12}$)'
+            }        
 		]
     }
 ];
