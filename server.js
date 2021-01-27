@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const http = require('http')
 const app = express()
 const hostname = 'https://exampleapirest.herokuapp.com';
+//const local = 'localhost';
 const PORT = process.env.PORT || 5000
 let users = [
 	{
@@ -528,7 +529,7 @@ app.get('/countryRegex', (req, res) => {
 	let data=req.query;
 	let newArr=[];
 	for(let i=0;i<countryFormat.length;i++){
-		if(countryFormat[i].id===data.id){
+		if(countryFormat[i].id.toString()===data.id){
 			newArr.push(countryFormat[i]);	
 		}
 	}
