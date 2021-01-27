@@ -147,7 +147,7 @@ let countryFormat =[
 		id:1,
 		code:'CR',
 		types:[
-				{
+			{
 				id:1,
                 name:'Cédula Nacional',
                 regex:'^[1-9][0-9]{8}$'
@@ -161,9 +161,98 @@ let countryFormat =[
 				id:3,
                 name:'Cédula de Residencia',
                 regex:'^([A-Z0-9]{17}$)|([0-9]{12}$)'
-            }        
+            }            
 		]
-    }
+    },
+    {
+		id:2,
+		code:'HND',
+		types:[
+			{
+				id:4,
+                name:'Cédula Nacional',
+                regex:'^[1-9][0-9]{8}$'
+            },
+            {
+				id:5,
+                name:'Pasaporte',
+                regex:'^[A-Z0-9\-]+$'
+            },
+            {
+				id:6,
+                name:'Cédula de Identidad',
+                regex:'^[A-Z0-9]{17}$)|([0-9]{12}$'
+            }            
+		]
+    },
+    {
+		id:3,
+		code:'NIC',
+		types:[
+			{
+				id:7,
+                name:'Cédula Nacional',
+                regex:'^[0-9]{3}-[0-9]{6}-[0-9]{4}[A-Z]$'
+            },
+            {
+				id:8,
+                name:'Pasaporte',
+                regex:'^[A-Z0-9\-]+$'
+            },
+            {
+				id:9,
+                name:'Cédula de Residencia',
+                regex:'[CD]{1}\s{1}[0-9]{8})$|[0-9]{6}$|^[0-9]{12}$'
+            },
+            {
+				id:10,
+                name:'Documento Extranjero',
+                regex:'^[A-Z0-9\-]+$'
+            },          
+		]
+    },
+    {
+		id:4,
+		code:'SVD',
+		types:[
+			{
+				id:7,
+                name:'DUI',
+                regex:'^[0-9]{9,14}$'
+            },
+            {
+				id:8,
+                name:'NIT',
+                regex:'^[0-9]{9,14}$'
+            },
+            {
+				id:9,
+                name:'Pasaporte',
+                regex:'^[A-Z]{1}[0-9]{8}$'
+            },
+            {
+				id:10,
+                name:'Cédula de Residencia',
+                regex:'^[A-Z0-9]+$'
+            },          
+		]
+    },
+    {
+		id:5,
+		code:'GTM',
+		types:[
+			{
+				id:7,
+                name:'DTI',
+                regex:'^[0-9]{12}$'
+            },       
+            {
+				id:9,
+                name:'Pasaporte',
+                regex:'^[A-Z0-9]+$'
+            }                   
+		]
+	}
 ];
 
 let upsell=[
@@ -436,8 +525,14 @@ app.get('/interest', (req, res) => {
     res.send(interest)
 })
 app.get('/countryRegex', (req, res) => {
-
-	res.send(countryFormat)
+	let data=req.query;
+	let newArr=[];
+	for(let i=0;i<countryFormat.length;i++){
+		if(countryFormat[i].id===data.id){
+			newArr.push(countryFormat[i]);	
+		}
+	}
+	res.send(newArr)
 })
 
 app.post('/favorite', (req, res) => {
