@@ -64,6 +64,10 @@ let categoriesWM={
     ]
 }
 
+let link={
+	urlDirection:'http://stgcliente.skandia.com.co/wps/portal/clientes/fpx/home',
+	isEmpty:false
+}
 
 let warehouse=[
 {
@@ -489,6 +493,10 @@ app.get('/stepone', (req, res) => {
 
 app.get('/upsell', (req, res) => {
     res.send(upsell)
+})
+
+app.post('/link',(req, res) => {
+    res.send(link)
 })
 app.get('/typeNotification', (req, res) => {
     res.send(typeNotification)
