@@ -495,7 +495,7 @@ app.get('/upsell', (req, res) => {
     res.send(upsell)
 })
 
-app.get('/link',(req, res) => {
+app.post('/link',(req, res) => {
     res.send(crossell)
 })
 app.get('/typeNotification', (req, res) => {
