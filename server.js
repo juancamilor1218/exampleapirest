@@ -468,6 +468,28 @@ app.post('/login', (req, res) => {
     });
     res.send(login)
 })
+app.post('/create-objective', (req, res) => {
+    let data = req.body;
+    res.header("Access-Control-Allow-Origin", "*");
+    let login =   {
+      "ObjectiveId" :112,
+        "PersId" :9,
+        "Goal_Name" :"",
+        "Goal_Value" :"",
+        "Goal_Start" :"",
+        "Goal_End" :"",
+        "Creation_Date" :"",
+        "Status" :"",
+        "Emptiness_Status" :"",
+        "Category" :"",
+        "Category_Id" :"",
+        "Origin" :"",
+        "COINF_CONTRACT" :"",
+        "COINF_PRODUCT" :"",
+        "CONTRACT_STATE" :""
+    };   
+    res.send(login)
+})
 app.post('/update', (req, res) => {
     let data = req.body;
     let update = [{id: '0',pass: ''}];
