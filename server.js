@@ -474,7 +474,7 @@ app.post('/create-objective', (req, res) => {
     let login =   {
       "ObjectiveId" :112,
         "PersId" :9,
-        "Goal_Name" :"",
+        "Goal_Name" :data.Goal_Name | '',
         "Goal_Value" :"",
         "Goal_Start" :"",
         "Goal_End" :"",
